@@ -1,35 +1,70 @@
-A unified financial infrastructure API designed to integrate all major financial services — including capital markets, debt instruments, asset tokenization, account management, payments, and smart trading — into one cohesive platform.
----
-Overview
-One-Stop Finance is a modular API system that:
-- Tokenizes assets (credit, equity, real estate, etc.)
-- Manages financial instruments (debt, capital, savings)
-- Enables seamless trading and transfers between tokenized accounts
-- Facilitates real-time payments and capital flows
-- Plans to integrate smart-contract-based compliance and settlement
+# 🏦 One-Stop Finance API Hub
 
-It’s designed for developers, fintech startups, and researchers exploring composable financial protocols.
----
-Tech Stack:
-- Backend: Python + FastAPI
-- Database: PostgreSQL
-- Auth & Security: OAuth2 (planned)
-- Token Engine: Custom ledger with modular contract logic (WIP)
----
-Core Modules (Planned)
-Module    |  Description
-accounts  |  Token-based account structure, user identity
-assets	  |  Token registry for all tradable/claimable assets
-debt	    |  Credit issuance, interest tracking, repayment systems
-payments	|  Instant payment routing and token transfers
-market	  |  Matchmaking, bids/asks, order routing
-ledger	  |  Transactional engine powering the token economy
----
-Vision
-We aim to become the Stripe + Zerodha + DeFi protocol for the modern programmable economy — usable by startups, co-ops, researchers, and embedded fintech builders alike.
+A unified financial infrastructure API designed to bring together all essential financial services — capital markets, debt issuance, asset tokenization, account management, payment systems, and programmable smart transactions — under a single modular platform.
 
-Getting Started
-Setup instructions coming soon. For now, the repo is under early active development.
 ---
-Contributions are welcome — especially around modularity, asset modeling, and testing. Please open issues to suggest ideas or get involved.
 
+## 🚀 Overview
+
+**One-Stop Finance** is a backend system built to:
+- Tokenize financial assets (credit, equity, real estate, etc.)
+- Support debt creation, tracking, and repayment
+- Enable peer-to-peer and market-based trading
+- Facilitate seamless and programmable payment flows
+- Serve as a plug-and-play hub for embedded fintech services
+
+---
+
+## 🧠 Vision
+
+We aim to build a programmable API layer that combines the robustness of traditional finance with the flexibility of DeFi — usable by startups, co-operatives, and researchers alike. Think: **Stripe + Zerodha + DeFi Protocol** in one interface.
+
+---
+
+## 📦 Tech Stack
+
+- **Backend:** Python (FastAPI)
+- **Database:** PostgreSQL
+- **Architecture:** Modular, layered design (inspired by microservices)
+- **Planned:** OAuth2 authentication, Webhooks, and E2E Encryption
+
+---
+
+## 🔧 Core Modules (Planned)
+
+| Module       | Description                                           |
+|--------------|-------------------------------------------------------|
+| `accounts`   | Identity and tokenized account management             |
+| `assets`     | Token registry for capital, debt, and real-world assets |
+| `debt`       | Credit issuance, interest calculation, repayments     |
+| `payments`   | Direct token transfers, programmable payments         |
+| `market`     | Matching engine for bids/offers and asset exchange    |
+| `ledger`     | Core engine for balance and transaction integrity     |
+
+---
+
+## 🛠️ Setup Instructions
+
+> The project is in early development. Setup instructions and modular documentation will be added soon.
+
+---
+
+## 📈 Roadmap
+
+- ✅ Define modular structure
+- 🛠️ Build MVP for `assets`, `accounts`, and `ledger`
+- 🔐 Add authentication and access control
+- 🧪 Add test coverage and deploy CI/CD
+- 🌐 Expose API to frontend or third-party clients
+
+---
+
+## 🤝 Contributing
+
+Have ideas or want to build with us? Open an issue or fork the repo — we welcome contributors with a fintech mindset or product-first vision!
+
+---
+
+## 📄 License
+
+MIT License
