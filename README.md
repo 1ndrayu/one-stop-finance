@@ -1,70 +1,68 @@
-# 🏦 One-Stop Finance API Hub
+# 💸 one-stop-finance
 
-A unified financial infrastructure API designed to bring together all essential financial services — capital markets, debt issuance, asset tokenization, account management, payment systems, and programmable smart transactions — under a single modular platform.
+A cohesive API hub for integrating diverse financial services — including capital, assets, debt, tokens, and payments — under a unified backend infrastructure.
 
----
-
-## 🚀 Overview
-
-**One-Stop Finance** is a backend system built to:
-- Tokenize financial assets (credit, equity, real estate, etc.)
-- Support debt creation, tracking, and repayment
-- Enable peer-to-peer and market-based trading
-- Facilitate seamless and programmable payment flows
-- Serve as a plug-and-play hub for embedded fintech services
+> Built with FastAPI + PostgreSQL, this project is modular, extensible, and aims to simulate a real-world fintech stack with authentication, user management, token operations, and market-level mechanics.
 
 ---
 
-## 🧠 Vision
+## 📦 Current Modules
 
-We aim to build a programmable API layer that combines the robustness of traditional finance with the flexibility of DeFi — usable by startups, co-operatives, and researchers alike. Think: **Stripe + Zerodha + DeFi Protocol** in one interface.
+### ✅ `accounts/`
+User authentication and identity layer
+- **Register / Login** with JWT-based auth
+- **Password hashing** and token security
+- Built-in **roles** & scalable user modeling
+- Ready for user-wallet linking and permissions
 
----
-
-## 📦 Tech Stack
-
-- **Backend:** Python (FastAPI)
-- **Database:** PostgreSQL
-- **Architecture:** Modular, layered design (inspired by microservices)
-- **Planned:** OAuth2 authentication, Webhooks, and E2E Encryption
-
----
-
-## 🔧 Core Modules (Planned)
-
-| Module       | Description                                           |
-|--------------|-------------------------------------------------------|
-| `accounts`   | Identity and tokenized account management             |
-| `assets`     | Token registry for capital, debt, and real-world assets |
-| `debt`       | Credit issuance, interest calculation, repayments     |
-| `payments`   | Direct token transfers, programmable payments         |
-| `market`     | Matching engine for bids/offers and asset exchange    |
-| `ledger`     | Core engine for balance and transaction integrity     |
+### 🔄 `app/`
+Core FastAPI app wiring
+- Central `main.py` with modular route inclusion
+- Database setup (`database.py`) with SQLAlchemy
+- Structured for clean expansion
 
 ---
 
-## 🛠️ Setup Instructions
+## 🔜 Roadmap
 
-> The project is in early development. Setup instructions and modular documentation will be added soon.
+> The project is actively growing. Here's what's coming:
 
----
-
-## 📈 Roadmap
-
-- ✅ Define modular structure
-- 🛠️ Build MVP for `assets`, `accounts`, and `ledger`
-- 🔐 Add authentication and access control
-- 🧪 Add test coverage and deploy CI/CD
-- 🌐 Expose API to frontend or third-party clients
+| Module         | Status   | Description |
+|----------------|----------|-------------|
+| `accounts/`    | ✅ Done   | Auth, login, JWT, roles |
+| `wallets/`     | 🔜 Planned | User balances, wallets, transfers |
+| `tokens/`      | 🔜 Planned | Tokenize debt/assets/capital |
+| `markets/`     | 🔜 Planned | Simulated trading, liquidity |
+| `payments/`    | 🔜 Planned | Gateway integrations & transfers |
 
 ---
 
-## 🤝 Contributing
+## ⚙️ Tech Stack
 
-Have ideas or want to build with us? Open an issue or fork the repo — we welcome contributors with a fintech mindset or product-first vision!
+- **Python 3.11**
+- **FastAPI** (Web framework)
+- **SQLAlchemy** + **PostgreSQL** (ORM + DB)
+- **JWT Auth** with `python-jose` & `passlib`
+- Modular, scalable, production-oriented code structure
 
 ---
 
-## 📄 License
+## 🛠 Setup Instructions
 
-MIT License
+# Clone
+git clone https://github.com/1ndrayu/one-stop-finance.git
+cd one-stop-finance
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the API
+uvicorn app.main:app --reload
+
+# Interactive Swagger UI:
+http://localhost:8000/docs
+
