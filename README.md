@@ -17,15 +17,15 @@ A cohesive API hub for integrating diverse financial services — including capi
 
 # Setup Instructions
 ---
-## Clone
+Clone
 git clone https://github.com/1ndrayu/one-stop-finance.git
 cd one-stop-finance
 
-## Install dependencies
+Install dependencies
 pip install -r requirements.txt
 
-## Run the API
+Run the API
 uvicorn app.main:app --reload
 
-## Interactive Swagger UI:
+Interactive Swagger UI:
 http://localhost:8000/docs
