@@ -1,38 +1,83 @@
-# one-stop-finance
+# One-Stop-Finance
 
-A cohesive API hub for integrating diverse financial services — including capital, assets, debt, tokens, and payments — under a unified backend infrastructure.
-
-> Built with FastAPI + PostgreSQL, this project is modular, extensible, and aims to simulate a real-world fintech stack with authentication, user management, token operations, and market-level mechanics.
+A simple platform to tokenize real-world assets and manage them through a backend, issuer dashboard, and investor portal.
 
 ---
-# Core Modules
-- Asset Tokenization Engine	Convert physical assets into digital tokens	Python / FastAPI
-- KYC/AML Module	Verify identity with Aadhaar + PAN	API integrations: Digilocker, Karza
-- Issuer Dashboard	Interface to register assets and issue tokens	React / Next.js
-- Investor Portal	Buy/sell/view tokens, manage portfolio	React / WalletConnect
-- Smart Contract Layer	Represent tokenized assets on-chain	Solidity / Polygon
-- Compliance Layer	Handle SEBI sandbox & regulatory reporting	Manual + API logging
-- Custody + Escrow	Hold real assets or legal agreements	Partner integration
+
+## Quick Setup (Windows)
+
 ---
 
-# Setup Instructions
----
-Clone
+### 1. Clone the Repository
 
-git clone https://github.com/1ndrayu/one-stop-finance.git
+```powershell
+git clone https://github.com/YOUR_USERNAME/one-stop-finance.git
 cd one-stop-finance
+```
 
+---
 
-Install dependencies
+### 2. Backend Setup (FastAPI)
 
+```powershell
+cd asset_token_engine
+copy .env.example .env
+python -m venv venv
+.\venv\Scripts\activate
 pip install -r requirements.txt
+uvicorn main:app --reload
+```
 
+Visit: `http://localhost:8000/docs`
 
-Run the API
+---
 
-uvicorn app.main:app --reload
+### 3. PostgreSQL Setup
 
+Create a database named `asset_token_engine` using pgAdmin or CLI.
 
-Interactive Swagger UI:
+---
 
-http://localhost:8000/docs
+### 4. Issuer Dashboard (React / Next.js)
+
+```powershell
+cd ..\issuer-dashboard
+copy .env.local.example .env.local
+npm install
+npm run dev
+```
+
+Visit: `http://localhost:3000`
+
+---
+
+### 5. Investor Portal (React / WalletConnect)
+
+```powershell
+cd ..\investor-portal
+copy .env.local.example .env.local
+npm install
+npm run dev
+```
+
+Visit: `http://localhost:3001`
+
+---
+
+## Environment Files
+
+Each folder has a `.env.example` or `.env.local.example`.
+
+- Copy it to `.env` or `.env.local`
+- Fill in your own values
+- Do **not** commit `.env` files
+
+---
+
+## You're Ready
+
+- Backend runs at `localhost:8000`
+- Issuer dashboard at `localhost:3000`
+- Investor portal at `localhost:3001`
+
+---
