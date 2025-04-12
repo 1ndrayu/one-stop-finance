@@ -63,3 +63,45 @@ export default function AssetForm() {
     </form>
   );
 }
+
+import { useState } from 'react';
+
+export default function AssetForm() {
+  const [name, setName] = useState('');
+  const [assetType, setAssetType] = useState('');
+  const [value, setValue] = useState('');
+  const [metadataURI, setMetadataURI] = useState('');
+  const [totalTokens, setTotalTokens] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch('/api/tokenize-asset', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name,
+        assetType,
+        value,
+        metadataURI,
+        totalTokens,
+      }),
+    });
+
+    if (response.ok) {
+      alert('Asset tokenized successfully!');
+    } else {
+      alert('Error tokenizing asset');
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      {/* Form fields for asset name, type, value, etc. */}
+      <button type="submit">Tokenize Asset</button>
+    </form>
+  );
+}
+
