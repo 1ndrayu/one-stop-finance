@@ -21,10 +21,6 @@ A cohesive API hub for integrating diverse financial services — including capi
 git clone https://github.com/1ndrayu/one-stop-finance.git
 cd one-stop-finance
 
-## Create virtual environment
-python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
-
 ## Install dependencies
 pip install -r requirements.txt
 
