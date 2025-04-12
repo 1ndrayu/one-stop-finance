@@ -1,4 +1,4 @@
-# 💸 one-stop-finance
+# one-stop-finance
 
 A cohesive API hub for integrating diverse financial services — including capital, assets, debt, tokens, and payments — under a unified backend infrastructure.
 
@@ -15,8 +15,8 @@ A cohesive API hub for integrating diverse financial services — including capi
 - Custody + Escrow	Hold real assets or legal agreements	Partner integration
 ---
 
-# 🛠 Setup Instructions
-
+# Setup Instructions
+---
 ## Clone
 git clone https://github.com/1ndrayu/one-stop-finance.git
 cd one-stop-finance
