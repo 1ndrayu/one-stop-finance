@@ -6,47 +6,6 @@ A cohesive API hub for integrating diverse financial services — including capi
 
 ---
 
-## 📦 Current Modules
-
-### ✅ `accounts/`
-User authentication and identity layer
-- **Register / Login** with JWT-based auth
-- **Password hashing** and token security
-- Built-in **roles** & scalable user modeling
-- Ready for user-wallet linking and permissions
-
-### 🔄 `app/`
-Core FastAPI app wiring
-- Central `main.py` with modular route inclusion
-- Database setup (`database.py`) with SQLAlchemy
-- Structured for clean expansion
-
----
-
-## 🔜 Roadmap
-
-> The project is actively growing. Here's what's coming:
-
-| Module         | Status   | Description |
-|----------------|----------|-------------|
-| `accounts/`    | ✅ Done   | Auth, login, JWT, roles |
-| `wallets/`     | 🔜 Planned | User balances, wallets, transfers |
-| `tokens/`      | 🔜 Planned | Tokenize debt/assets/capital |
-| `markets/`     | 🔜 Planned | Simulated trading, liquidity |
-| `payments/`    | 🔜 Planned | Gateway integrations & transfers |
-
----
-
-## ⚙️ Tech Stack
-
-- **Python 3.11**
-- **FastAPI** (Web framework)
-- **SQLAlchemy** + **PostgreSQL** (ORM + DB)
-- **JWT Auth** with `python-jose` & `passlib`
-- Modular, scalable, production-oriented code structure
-
----
-
 ## 🛠 Setup Instructions
 
 # Clone
